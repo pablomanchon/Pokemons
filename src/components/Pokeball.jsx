@@ -120,7 +120,7 @@ export const Pokeball = ({ pokeData }) => {
           initial="closed"
           animate={control}
           className="name">
-          {pokemon?.name.toUpperCase()}
+          {pokemon?.name?.toUpperCase()}
         </motion.span>
         <Stats control={control} stats={pokemon.stats} />
       </motion.div>
