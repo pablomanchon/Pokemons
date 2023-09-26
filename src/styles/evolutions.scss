@@ -1,0 +1,28 @@
+.evolution {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px black;
+  background-color: rgba(0, 0, 0, 0.457);
+  .evolutions-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    span {
+      color: white;
+      font-weight: 700;
+    }
+  }
+  .evolution-image {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    img {
+      width: 4rem;
+      height: 4rem;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+}
