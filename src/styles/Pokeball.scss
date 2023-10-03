@@ -57,8 +57,10 @@
     .name {
       position: absolute;
       bottom: 0;
+      left: 1rem;
       margin: auto;
       background-color: rgba(0, 0, 0, 0.583);
+      font-size: 0.8rem;
       color: white;
       padding: 0.2rem;
       border-radius: 1rem;
@@ -68,9 +70,10 @@
     }
     .stats {
       list-style: none;
-      width: 10rem;
+      font-size: 0.8rem;
+      width: 7rem;
       position: absolute;
-      left: 8rem;
+      left: 7rem;
       color: white;
       background-color: rgba(0, 0, 0, 0.624);
       padding: 0.5rem;

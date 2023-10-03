@@ -25,9 +25,9 @@ export const Pokeball = ({ pokeData }) => {
 
   const firstHalf = {
     open: {
-      translateY: -50,
-      rotate: -45,
-      translateX: -60,
+      translateY: -120,
+      rotate: 20,
+      translateX: -70,
       transition: {
         type: "spring",
       },
@@ -43,9 +43,9 @@ export const Pokeball = ({ pokeData }) => {
   };
   const secondHalf = {
     open: {
-      translateY: 50,
-      rotate: 45,
-      translateX: -60,
+      translateY: -95,
+      rotate: 75,
+      translateX: -178,
       transition: {
         type: "spring",
       },
@@ -61,7 +61,7 @@ export const Pokeball = ({ pokeData }) => {
   };
   const pokeVariants = {
     open: {
-      x: [0, 150, 120],
+      x: [0, 120, 0],
       scale: [1, 1, 1.5],
     },
     closed: {
@@ -80,9 +80,10 @@ export const Pokeball = ({ pokeData }) => {
       onHoverStart={() => control.start("hover")}
       onHoverEnd={() => control.start("noHover")}
       onClick={toggleOpen}
-      className="pokeball">
-      <motion.div variants={firstHalf} animate={control} className="first-half">
-        <div className="first">
+      className='pokeball'
+    >
+      <motion.div variants={firstHalf} animate={control} className='first-half'>
+        <div className='first'>
           <motion.div
             animate={control}
             variants={{
@@ -93,22 +94,22 @@ export const Pokeball = ({ pokeData }) => {
                 backgroundColor: "#ffffff",
               },
             }}
-            className="second"
+            className='second'
           />
         </div>
       </motion.div>
       <motion.div
         variants={secondHalf}
         animate={control}
-        className="second-half"
+        className='second-half'
       />
-      <motion.div variants={pokeVariants} animate={control} className="pokemon">
+      <motion.div variants={pokeVariants} animate={control} className='pokemon'>
         <motion.img
           variants={{
             open: { opacity: 1 },
             closed: { opacity: 0 },
           }}
-          initial="closed"
+          initial='closed'
           animate={control}
           src={pokemon?.image}
         />
@@ -117,9 +118,10 @@ export const Pokeball = ({ pokeData }) => {
             open: { opacity: 1 },
             closed: { opacity: 0 },
           }}
-          initial="closed"
+          initial='closed'
           animate={control}
-          className="name">
+          className='name'
+        >
           {pokemon?.name?.toUpperCase()}
         </motion.span>
         <Stats control={control} stats={pokemon.stats} />
